@@ -1,0 +1,11 @@
+{
+    "require": {
+        "symfony/console": "~2.6",
+        "react/child-process": "0.3",
+        "symfony/config": "~2.6",
+        "symfony/yaml": "~2.6"
+    },
+    "autoload": {
+        "psr-4": { "Update\\": "src/" }
+    }
+}

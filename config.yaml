@@ -1,0 +1,46 @@
+update:
+  remote:
+    host: host
+    path: /var/www/httpdocs/
+    database:
+        host: localhost
+        username: root
+        password: root
+        name: dbname
+        dump: dbname.sql
+  local:
+    path: ./
+    database:
+        host: localhost
+        username: root
+        password: root
+        name: dbname
+    backupPath: /var/www/_backups/
+  download:
+    paths:
+      - remote: ../shared/downloader
+        local: ./
+      - remote: ../shared/includes
+        local: ./
+      - remote: ../shared/media
+        local: ./
+      - remote: ../shared/var
+        local: ./
+    excludes:
+      - .DS_Store
+      - ._*
+      - app/etc/local.xml
+      - includes/src/
+      - media/captcha/base/
+      - media/catalog/product/cache/
+      - media/cache/
+      - media/css/
+      - media/js/
+      - media/tmp/
+      - media/wysiwyg/.thumbs/
+      - var/cache/
+      - var/locks/
+      - var/package/tmp/
+      - var/session/
+      - var/tmp/
+      - maintenance.flag*
